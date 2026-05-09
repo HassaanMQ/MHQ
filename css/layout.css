@@ -552,7 +552,7 @@ section {
 .timeline-item {
   display: flex;
   gap: var(--space-4);
-  padding-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
 }
 
 .timeline-item:last-child { padding-bottom: 0; }
