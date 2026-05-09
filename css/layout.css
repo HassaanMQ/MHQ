@@ -152,8 +152,10 @@ section {
   padding-top: calc(var(--nav-height) + var(--space-8));
   padding-bottom: var(--space-15);
   position: relative;
+  overflow: hidden;
   background:
-    radial-gradient(ellipse 70% 50% at 65% 35%, rgba(212, 175, 55, 0.05) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 60% at 92% 50%,  rgba(26, 48, 112, 0.35) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 45% at 15% 40%,  rgba(212, 175, 55, 0.06) 0%, transparent 60%),
     var(--bg-primary);
 }
 
@@ -163,6 +165,61 @@ section {
   grid-template-columns: 1fr;
   gap: var(--space-10);
   align-items: center;
+  position: relative;
+  z-index: var(--z-base);
+}
+
+/* ── Hero geometric shapes (logo-inspired angular frames) ──── */
+.hero__geo-shapes {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 260px;
+  height: 70%;
+  pointer-events: none;
+  display: none;
+  z-index: 0;
+}
+
+.hero__geo-shape {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-9deg);
+  background: transparent;
+}
+
+.hero__geo-shape--1 {
+  right: -40px;
+  width: 110px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-right: none;
+  background: linear-gradient(to right, rgba(212, 175, 55, 0.04), transparent);
+  box-shadow: -5px 0 24px rgba(212, 175, 55, 0.14);
+}
+
+.hero__geo-shape--2 {
+  right: 80px;
+  width: 88px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-right: none;
+  background: linear-gradient(to right, rgba(212, 175, 55, 0.02), transparent);
+  box-shadow: -3px 0 14px rgba(212, 175, 55, 0.07);
+}
+
+.hero__geo-shape--3 {
+  right: 175px;
+  width: 68px;
+  border: 1px solid rgba(212, 175, 55, 0.11);
+  border-right: none;
+}
+
+.hero__geo-shape--4 {
+  right: 250px;
+  width: 50px;
+  border: 1px solid rgba(212, 175, 55, 0.06);
+  border-right: none;
 }
 
 .hero__label {
@@ -713,7 +770,9 @@ section {
   transform: translate(-50%, -50%);
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.04) 0%, transparent 68%);
+  background:
+    radial-gradient(ellipse 60% 60% at 60% 50%, rgba(26, 48, 112, 0.2) 0%, transparent 70%),
+    radial-gradient(circle, rgba(212, 175, 55, 0.04) 0%, transparent 68%);
   pointer-events: none;
 }
 
@@ -854,6 +913,8 @@ section {
     width: 380px;
     height: 460px;
   }
+
+  .hero__geo-shapes { display: block; }
 
   .mhq__grid {
     grid-template-columns: repeat(3, 1fr);

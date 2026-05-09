@@ -161,8 +161,11 @@
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 700;
-  color: var(--gold-1);
-  opacity: 0.5;
+  background: var(--gradient-silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.7;
   min-width: 24px;
   padding-top: 2px;
   flex-shrink: 0;
@@ -202,15 +205,74 @@
    DIVIDER
 ══════════════════════════════════════════════════════════════ */
 
+/* Divider with diamond centre — echoes the separator line in the MHQ logo */
 .divider {
-  width: 48px;
-  height: 2px;
-  background: var(--gradient-gold);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 16px;
   border: none;
   margin: var(--space-4) 0;
+  background: none;
 }
 
-.divider--center {
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gradient-gold);
+  opacity: 0.6;
+}
+
+.divider::before { margin-right: 8px; }
+.divider::after  { margin-left:  8px; }
+
+/* Diamond dot */
+.divider > span,
+.divider:not(:empty) {
+  display: none;
+}
+
+.divider-diamond {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 16px;
+  border: none;
+  margin: var(--space-4) 0;
+  background: none;
+}
+
+.divider-diamond::before,
+.divider-diamond::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-1));
+  opacity: 0.5;
+}
+
+.divider-diamond::after {
+  background: linear-gradient(to left, transparent, var(--gold-1));
+}
+
+.divider-diamond__dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gradient-gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin: 0 10px;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.divider--center,
+.divider-diamond--center {
   margin-left: auto;
   margin-right: auto;
 }
@@ -222,6 +284,13 @@
 
 .text--gold {
   background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text--silver {
+  background: var(--gradient-silver);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
