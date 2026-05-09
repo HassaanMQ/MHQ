@@ -66,7 +66,7 @@ section {
 }
 
 .nav.is-scrolled {
-  background: rgba(11, 15, 26, 0.92);
+  background: rgba(5, 9, 26, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -92,7 +92,7 @@ section {
 .nav__logo:hover { opacity: 0.8; }
 
 .nav__logo-img {
-  height: 44px;
+  height: 48px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -149,13 +149,16 @@ section {
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding-top: calc(var(--nav-height) + var(--space-8));
-  padding-bottom: var(--space-15);
+  padding-top: calc(var(--nav-height) + var(--space-4));
+  padding-bottom: var(--space-8);
   position: relative;
-  overflow: hidden;
   background:
-    radial-gradient(ellipse 40% 60% at 92% 50%,  rgba(26, 48, 112, 0.35) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 45% at 15% 40%,  rgba(212, 175, 55, 0.06) 0%, transparent 60%),
+    /* Angular geometric panel — right side, echoes logo geometry */
+    linear-gradient(-12deg, transparent 54%, rgba(26, 48, 112, 0.14) 54%, rgba(26, 48, 112, 0.06) 64%, transparent 64%),
+    /* Deep blue radial glow — right (the Q) */
+    radial-gradient(ellipse 50% 70% at 92% 50%, rgba(26, 48, 112, 0.28) 0%, transparent 70%),
+    /* Gold radial glow — left (the M) */
+    radial-gradient(ellipse 55% 45% at 12% 38%, rgba(212, 175, 55, 0.07) 0%, transparent 60%),
     var(--bg-primary);
 }
 
@@ -169,58 +172,6 @@ section {
   z-index: var(--z-base);
 }
 
-/* ── Hero geometric shapes (logo-inspired angular frames) ──── */
-.hero__geo-shapes {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 260px;
-  height: 70%;
-  pointer-events: none;
-  display: none;
-  z-index: 0;
-}
-
-.hero__geo-shape {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  transform: skewX(-9deg);
-  background: transparent;
-}
-
-.hero__geo-shape--1 {
-  right: -40px;
-  width: 110px;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  border-right: none;
-  background: linear-gradient(to right, rgba(212, 175, 55, 0.04), transparent);
-  box-shadow: -5px 0 24px rgba(212, 175, 55, 0.14);
-}
-
-.hero__geo-shape--2 {
-  right: 80px;
-  width: 88px;
-  border: 1px solid rgba(212, 175, 55, 0.22);
-  border-right: none;
-  background: linear-gradient(to right, rgba(212, 175, 55, 0.02), transparent);
-  box-shadow: -3px 0 14px rgba(212, 175, 55, 0.07);
-}
-
-.hero__geo-shape--3 {
-  right: 175px;
-  width: 68px;
-  border: 1px solid rgba(212, 175, 55, 0.11);
-  border-right: none;
-}
-
-.hero__geo-shape--4 {
-  right: 250px;
-  width: 50px;
-  border: 1px solid rgba(212, 175, 55, 0.06);
-  border-right: none;
-}
 
 .hero__label {
   display: inline-block;
@@ -245,14 +196,14 @@ section {
   line-height: var(--leading-base);
   color: var(--text-secondary);
   max-width: 520px;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
 }
 
 .hero__actions {
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-4);
 }
 
 .hero__metrics {
@@ -913,8 +864,6 @@ section {
     width: 380px;
     height: 460px;
   }
-
-  .hero__geo-shapes { display: block; }
 
   .mhq__grid {
     grid-template-columns: repeat(3, 1fr);
