@@ -241,12 +241,35 @@ section {
   justify-content: center;
 }
 
+/* Large faint brand mark behind the portrait */
+.hero__watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: clamp(100px, 20vw, 220px);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  white-space: nowrap;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
 .hero__portrait {
   position: relative;
   width: 280px;
   height: 340px;
   border-radius: 12px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero__portrait-placeholder {
@@ -300,6 +323,7 @@ section {
   position: absolute;
   inset: -20px;
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero__decoration-ring {
