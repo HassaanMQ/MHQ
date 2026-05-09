@@ -1,0 +1,72 @@
+:root {
+  /* Backgrounds */
+  --bg-primary:   #0B0F1A;
+  --bg-secondary: #101626;
+  --bg-card:      #111827;
+
+  /* Text */
+  --text-primary:   #EAEAEA;
+  --text-secondary: #A0A8B8;
+
+  /* Brand */
+  --gold-1:      #D4AF37;
+  --gold-2:      #FFD700;
+  --accent-blue: #3B82F6;
+
+  /* Computed */
+  --gradient-gold: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'Inter', sans-serif;
+  --text-hero:    clamp(48px, 5vw, 64px);
+  --text-section: clamp(28px, 3vw, 40px);
+  --text-sub:     clamp(18px, 2vw, 24px);
+  --text-body:    16px;
+  --text-sm:      14px;
+  --text-xs:      12px;
+
+  --leading-tight: 1.2;
+  --leading-base:  1.7;
+  --tracking-wide:  0.08em;
+  --tracking-wider: 0.14em;
+
+  /* Spacing — 8px grid */
+  --space-1:  8px;
+  --space-2:  16px;
+  --space-3:  24px;
+  --space-4:  32px;
+  --space-6:  48px;
+  --space-8:  64px;
+  --space-10: 80px;
+  --space-15: 120px;
+  --section-padding: 100px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --text-max:      600px;
+  --nav-height:    72px;
+  --radius-card:   8px;
+  --radius-btn:    6px;
+  --radius-full:   9999px;
+
+  /* Borders */
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.06);
+  --border-gold:   1px solid rgba(212, 175, 55, 0.25);
+
+  /* Shadows */
+  --shadow-md:         0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-gold-glow:  0 0 20px rgba(212, 175, 55, 0.4);
+  --shadow-card-hover: 0 8px 32px rgba(212, 175, 55, 0.08);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.8s ease-out;
+
+  /* Z-index */
+  --z-base:    1;
+  --z-above:   10;
+  --z-nav:     100;
+  --z-overlay: 200;
+}

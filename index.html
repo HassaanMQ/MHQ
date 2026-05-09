@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MHQ — Strategic Technical Leadership. Bridging engineering complexity and business clarity.">
+  <meta name="theme-color" content="#0B0F1A">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="MHQ — Strategic Technical Leadership">
+  <meta property="og:description" content="Engineering doesn't fail. How it's understood does.">
+
+  <title>MHQ — Strategic Technical Leadership</title>
+
+  <!-- SVG favicon — no external file needed -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230B0F1A'/><text x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23D4AF37'>MHQ</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets — order matters -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+
+      <a href="#hero" class="nav__logo" aria-label="MHQ — Back to top">MHQ</a>
+
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#problem"    class="nav__link">The Gap</a></li>
+        <li><a href="#mhq"        class="nav__link">Framework</a></li>
+        <li><a href="#what-i-do"  class="nav__link">Work</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li>
+          <a href="#cta" class="btn btn--primary nav__cta">Let's Talk</a>
+        </li>
+      </ul>
+
+      <button
+        class="nav__toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════
+         1. HERO
+    ═══════════════════════════════════════════════ -->
+    <section class="section--hero" id="hero" aria-labelledby="hero-headline">
+      <div class="container hero__container">
+
+        <div class="hero__content reveal">
+          <span class="hero__label">Strategic Technical Leadership</span>
+
+          <h1 class="hero__headline" id="hero-headline">
+            Engineering doesn't fail.<br>
+            How it's <span class="text--gold">understood</span> does.
+          </h1>
+
+          <p class="hero__body">
+            I bridge the gap between engineering complexity and business
+            clarity — helping organizations turn technical excellence into
+            measurable strategic advantage.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#cta"  class="btn btn--primary">Work With Me</a>
+            <a href="#mhq"  class="btn btn--ghost">Learn My Approach</a>
+          </div>
+
+          <div class="hero__metrics" aria-label="Key metrics">
+            <div class="hero__metric">
+              <span class="hero__metric-number text--gold">12+</span>
+              <span class="hero__metric-label">Years Engineering</span>
+            </div>
+            <div class="hero__metric">
+              <span class="hero__metric-number text--gold">50+</span>
+              <span class="hero__metric-label">Teams Aligned</span>
+            </div>
+            <div class="hero__metric">
+              <span class="hero__metric-number text--gold">3</span>
+              <span class="hero__metric-label">Industries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__portrait" role="img" aria-label="Profile portrait">
+            <!--
+              Add your photo at assets/images/profile.jpg
+              The initials placeholder below shows until the image loads.
+            -->
+            <img
+              src="assets/images/profile.jpg"
+              alt="MHQ — Strategic Technical Leader"
+              width="380"
+              height="460"
+              class="hero__portrait-img"
+            >
+            <div class="hero__portrait-placeholder" aria-hidden="true">
+              <div class="hero__portrait-initials">MHQ</div>
+              <p class="hero__portrait-hint">profile.jpg</p>
+            </div>
+          </div>
+
+          <div class="hero__decoration" aria-hidden="true">
+            <div class="hero__decoration-ring"></div>
+            <div class="hero__decoration-dot hero__decoration-dot--1"></div>
+            <div class="hero__decoration-dot hero__decoration-dot--2"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         2. TRUST STRIP
+    ═══════════════════════════════════════════════ -->
+    <section class="section--trust" id="trust" aria-label="Contexts and industries">
+      <div class="container">
+        <div class="trust__inner reveal">
+          <span class="trust__label">Trusted across</span>
+          <ul class="trust__items" role="list">
+            <li class="trust__item">Enterprise Engineering</li>
+            <li class="trust__item">High-Growth Startups</li>
+            <li class="trust__item">Technical Leadership</li>
+            <li class="trust__item">Product Organizations</li>
+            <li class="trust__item">Executive Teams</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         3. PROBLEM
+    ═══════════════════════════════════════════════ -->
+    <section class="section--problem" id="problem" aria-labelledby="problem-headline">
+      <div class="container">
+        <div class="problem__container reveal">
+
+          <span class="section-label">The Gap</span>
+
+          <h2 class="problem__headline" id="problem-headline">
+            Most technical failures<br>aren't technical.
+          </h2>
+
+          <p class="problem__sub">
+            They're communication failures dressed in engineering language.
+          </p>
+
+          <hr class="divider divider--center" aria-hidden="true">
+
+          <p class="problem__body">
+            Engineering teams build remarkable things. But somewhere between
+            the pull request and the executive deck, something gets lost. The
+            nuance disappears. The context collapses. The brilliant work gets
+            misunderstood, misrepresented, or simply ignored.
+          </p>
+
+          <p class="problem__body">
+            The result? Good systems get decommissioned. Great engineers get
+            passed over. Organizations spend millions solving problems they
+            already solved — because no one built the bridge.
+          </p>
+
+          <blockquote class="problem__callout">
+            <p class="problem__callout-text">
+              "The single biggest problem in communication is the illusion
+              that it has taken place."
+            </p>
+            <cite class="problem__callout-attr">— George Bernard Shaw</cite>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         4. SOLUTION
+    ═══════════════════════════════════════════════ -->
+    <section class="section--solution" id="solution" aria-labelledby="solution-headline">
+      <div class="container">
+        <div class="solution__container reveal">
+
+          <span class="section-label">The Approach</span>
+
+          <h2 class="solution__headline" id="solution-headline">
+            Precision at the intersection.
+          </h2>
+
+          <p class="solution__body">
+            The MHQ approach brings engineering rigor to the art of
+            communication. Not by simplifying what's complex — but by finding
+            the language that does justice to both the technical reality and
+            the human stakes.
+          </p>
+
+          <p class="solution__body">
+            It's a framework built from years at the intersection of
+            engineering and strategy, tested in high-stakes environments where
+            misunderstanding is expensive and clarity is the only currency
+            that matters.
+          </p>
+
+          <div class="solution__pillars" role="list" aria-label="Framework pillars">
+            <div class="solution__pillar" role="listitem">Message</div>
+            <div class="solution__pillar" role="listitem">Humanity</div>
+            <div class="solution__pillar" role="listitem">Quality</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         5. MHQ FRAMEWORK
+    ═══════════════════════════════════════════════ -->
+    <section class="section--mhq" id="mhq" aria-labelledby="mhq-headline">
+      <div class="container">
+
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">The MHQ Framework</span>
+          <h2 class="section-header__headline" id="mhq-headline">
+            Three principles.<br><span class="text--gold">One standard.</span>
+          </h2>
+          <p class="section-header__body text--secondary">
+            Each principle reinforces the others. Together they form a
+            complete approach to technical communication that scales from
+            code reviews to board presentations.
+          </p>
+        </div>
+
+        <div class="mhq__grid" role="list">
+
+          <article class="mhq-card stagger-item reveal" role="listitem">
+            <div class="mhq-card__icon" aria-hidden="true">
+              <!-- Message icon — speech bubble -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="mhq-card__letter">Message</span>
+            <h3 class="mhq-card__title">Precision over simplicity.</h3>
+            <p class="mhq-card__body">
+              Every technical concept has the right words. Finding them isn't
+              about dumbing down — it's about leveling up. Clarity is a
+              craft, not a compromise.
+            </p>
+          </article>
+
+          <article class="mhq-card stagger-item reveal" role="listitem">
+            <div class="mhq-card__icon" aria-hidden="true">
+              <!-- Humanity icon — people -->
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span class="mhq-card__letter">Humanity</span>
+            <h3 class="mhq-card__title">Engineering serves people.</h3>
+            <p class="mhq-card__body">
+              Full stop. The best architecture means nothing if it ignores
+              the humans who build, maintain, and depend on it. Keep people
+              at the centre of every technical decision.
+            </p>
+          </article>
+
+          <article class="mhq-card stagger-item reveal" role="listitem">
+            <div class="mhq-card__icon" aria-hidden="true">
+              <!-- Quality icon — activity/pulse -->
+              <svg viewBox="0 0 24 24">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <span class="mhq-card__letter">Quality</span>
+            <h3 class="mhq-card__title">Excellence is a standard.</h3>
+            <p class="mhq-card__body">
+              Not a goal. Quality isn't achieved once — it's sustained
+              through consistent, intentional practice at every layer. From
+              the commit message to the strategic brief.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         6. WHAT I DO
+    ═══════════════════════════════════════════════ -->
+    <section class="section--what-i-do" id="what-i-do" aria-labelledby="what-i-do-headline">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">What I Do</span>
+          <h2 class="section-header__headline" id="what-i-do-headline">
+            Where I work best.
+          </h2>
+          <p class="section-header__body text--secondary">
+            I work with technical leaders and organizations at the
+            intersection of engineering complexity and business strategy.
+          </p>
+        </div>
+
+        <div class="what-i-do__grid" role="list">
+
+          <article class="service-card stagger-item reveal" role="listitem">
+            <span class="service-card__number" aria-hidden="true">01</span>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Technical Strategy</h3>
+              <p class="service-card__desc">
+                Translate complex engineering realities into boardroom-ready
+                roadmaps that align technical direction with business outcomes.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card stagger-item reveal" role="listitem">
+            <span class="service-card__number" aria-hidden="true">02</span>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Engineering Communication</h3>
+              <p class="service-card__desc">
+                Turn technical specs, architecture docs, and post-mortems into
+                narratives that move decision-makers to action.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card stagger-item reveal" role="listitem">
+            <span class="service-card__number" aria-hidden="true">03</span>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Cross-functional Alignment</h3>
+              <p class="service-card__desc">
+                Unite engineering, product, and business teams around shared
+                outcomes — eliminating the friction that kills momentum.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card stagger-item reveal" role="listitem">
+            <span class="service-card__number" aria-hidden="true">04</span>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Technical Leadership</h3>
+              <p class="service-card__desc">
+                Coach leads and managers on building high-trust, high-output
+                engineering cultures that retain talent and ship consistently.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card stagger-item reveal" role="listitem">
+            <span class="service-card__number" aria-hidden="true">05</span>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Architecture Review</h3>
+              <p class="service-card__desc">
+                Evaluate systems for scalability, maintainability, and
+                business fit — with an eye for the decisions that compound
+                over time.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card stagger-item reveal" role="listitem">
+            <span class="service-card__number" aria-hidden="true">06</span>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Executive Advisory</h3>
+              <p class="service-card__desc">
+                Serve as a trusted translator between engineering teams and
+                C-suite stakeholders — making technical context actionable at
+                the executive level.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         7. EXPERIENCE
+    ═══════════════════════════════════════════════ -->
+    <section class="section--experience" id="experience" aria-labelledby="exp-headline">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">Experience</span>
+          <h2 class="section-header__headline" id="exp-headline">
+            The work behind<br>the framework.
+          </h2>
+        </div>
+
+        <div class="experience__timeline" role="list">
+
+          <div class="timeline-item stagger-item reveal" role="listitem">
+            <div class="timeline-item__left" aria-hidden="true">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item__content">
+              <p class="timeline-item__period">2022 — Present</p>
+              <h3 class="timeline-item__role">Head of Engineering</h3>
+              <p class="timeline-item__company">[Your Company] · Full-time</p>
+              <p class="timeline-item__body">
+                Leading engineering strategy and cross-functional alignment
+                across distributed teams. Driving architectural decisions
+                that balance technical excellence with business velocity.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item stagger-item reveal" role="listitem">
+            <div class="timeline-item__left" aria-hidden="true">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item__content">
+              <p class="timeline-item__period">2019 — 2022</p>
+              <h3 class="timeline-item__role">Engineering Manager</h3>
+              <p class="timeline-item__company">[Your Company] · Full-time</p>
+              <p class="timeline-item__body">
+                Built and scaled engineering teams from 4 to 20+ engineers.
+                Established communication practices that reduced cross-team
+                friction and accelerated delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item stagger-item reveal" role="listitem">
+            <div class="timeline-item__left" aria-hidden="true">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item__content">
+              <p class="timeline-item__period">2016 — 2019</p>
+              <h3 class="timeline-item__role">Software Architect</h3>
+              <p class="timeline-item__company">[Your Company] · Full-time</p>
+              <p class="timeline-item__body">
+                Designed distributed systems handling millions of daily
+                transactions. Pioneered engineering documentation practices
+                adopted org-wide.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item stagger-item reveal" role="listitem">
+            <div class="timeline-item__left" aria-hidden="true">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item__content">
+              <p class="timeline-item__period">2013 — 2016</p>
+              <h3 class="timeline-item__role">Senior Software Engineer</h3>
+              <p class="timeline-item__company">[Your Company] · Full-time</p>
+              <p class="timeline-item__body">
+                Core contributor to platform infrastructure. First engineer to
+                systematically document architectural decisions — a practice
+                that became foundational to the team's culture.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         8. ABOUT
+    ═══════════════════════════════════════════════ -->
+    <section class="section--about" id="about" aria-labelledby="about-headline">
+      <div class="container">
+        <div class="about__container">
+
+          <div class="about__image-wrapper reveal">
+            <div class="about__portrait" role="img" aria-label="About portrait">
+              <img
+                src="assets/images/profile.jpg"
+                alt="MHQ"
+                width="320"
+                height="400"
+                class="about__portrait-img"
+              >
+              <div class="about__portrait-placeholder" aria-hidden="true">MHQ</div>
+            </div>
+            <div class="about__decoration" aria-hidden="true"></div>
+          </div>
+
+          <div class="about__content reveal">
+            <span class="section-label">About</span>
+            <h2 class="about__headline" id="about-headline">
+              Precision.<br><span class="text--gold">Perspective.</span> Impact.
+            </h2>
+
+            <p class="about__body">
+              I've spent over a decade at the intersection of engineering and
+              strategy. I've built distributed systems that scaled to millions
+              of users, led teams through technical transformations, and helped
+              executives understand the decisions their engineers were making —
+              and why those decisions mattered.
+            </p>
+
+            <p class="about__body">
+              The MHQ framework emerged from a simple observation: the most
+              technically excellent teams often fail not because of what they
+              build, but because of how they communicate it.
+            </p>
+
+            <p class="about__body">
+              Message. Humanity. Quality. These aren't soft skills — they're
+              strategic multipliers.
+            </p>
+
+            <div class="about__values" role="list" aria-label="Core areas">
+              <span class="tag" role="listitem">Engineering</span>
+              <span class="tag" role="listitem">Strategy</span>
+              <span class="tag" role="listitem">Leadership</span>
+              <span class="tag" role="listitem">Communication</span>
+              <span class="tag" role="listitem">Systems Thinking</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         9. CTA
+    ═══════════════════════════════════════════════ -->
+    <section class="section--cta" id="cta" aria-labelledby="cta-headline">
+      <div class="container">
+        <div class="cta__container reveal">
+
+          <span class="section-label">Get In Touch</span>
+
+          <h2 class="cta__headline" id="cta-headline">
+            Ready to close the gap?
+          </h2>
+
+          <p class="cta__body">
+            Whether you're a technical leader who wants to be heard at the
+            executive level, or an organization that needs someone who can
+            translate complexity into strategy — let's talk.
+          </p>
+
+          <div class="cta__actions">
+            <a href="mailto:qmhassaan619@gmail.com" class="btn btn--primary">
+              Start the Conversation
+            </a>
+            <a href="mailto:qmhassaan619@gmail.com" class="cta__email">
+              qmhassaan619@gmail.com
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo" aria-label="MHQ">MHQ</span>
+        <p class="footer__copy">&copy; 2026 MHQ. All rights reserved.</p>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="#hero" class="footer__link">Back to top</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
