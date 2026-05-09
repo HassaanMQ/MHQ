@@ -66,7 +66,7 @@ section {
 }
 
 .nav.is-scrolled {
-  background: rgba(5, 9, 26, 0.94);
+  background: rgba(7, 7, 15, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -153,12 +153,8 @@ section {
   padding-bottom: var(--space-8);
   position: relative;
   background:
-    /* Angular geometric panel — right side, echoes logo geometry */
-    linear-gradient(-12deg, transparent 54%, rgba(26, 48, 112, 0.14) 54%, rgba(26, 48, 112, 0.06) 64%, transparent 64%),
-    /* Deep blue radial glow — right (the Q) */
-    radial-gradient(ellipse 50% 70% at 92% 50%, rgba(26, 48, 112, 0.28) 0%, transparent 70%),
-    /* Gold radial glow — left (the M) */
-    radial-gradient(ellipse 55% 45% at 12% 38%, rgba(212, 175, 55, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 75% 50%, rgba(26, 48, 112, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 18% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 55%),
     var(--bg-primary);
 }
 
@@ -265,19 +261,32 @@ section {
 
 .hero__portrait {
   position: relative;
-  width: 280px;
-  height: 340px;
-  border-radius: 12px;
+  width: 300px;
+  height: 380px;
+  border-radius: 0;
   overflow: hidden;
   z-index: 1;
+}
+
+/* Gradient fade — subject emerges from darkness */
+.hero__portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,    var(--bg-primary) 0%,   transparent 40%),
+    linear-gradient(to right,  var(--bg-primary) 0%,   transparent 28%),
+    linear-gradient(to left,   var(--bg-primary) 0%,   transparent 28%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero__portrait-placeholder {
   position: absolute;
   inset: 0;
-  background: var(--bg-card);
-  border: var(--border-subtle);
-  border-radius: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,31 +327,8 @@ section {
 
 .hero__portrait-img.is-loaded { display: block; }
 
-/* Decorative ring */
-.hero__decoration {
-  position: absolute;
-  inset: -20px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero__decoration-ring {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(212, 175, 55, 0.1);
-  border-radius: 18px;
-}
-
-.hero__decoration-dot {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: var(--radius-full);
-  background: var(--gradient-gold);
-}
-
-.hero__decoration-dot--1 { top: -4px;    left:  42%; }
-.hero__decoration-dot--2 { bottom: -4px; right: 32%; }
+/* Decorative ring — hidden in frameless portrait mode */
+.hero__decoration { display: none; }
 
 /* Scroll indicator */
 .hero__scroll-indicator {
@@ -664,13 +650,26 @@ section {
 .about__portrait {
   width: 100%;
   aspect-ratio: 3 / 4;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
-  background: var(--bg-card);
-  border: var(--border-subtle);
+  background: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.about__portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,   var(--bg-secondary) 0%, transparent 40%),
+    linear-gradient(to right, var(--bg-secondary) 0%, transparent 30%),
+    linear-gradient(to left,  var(--bg-secondary) 0%, transparent 30%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .about__portrait-placeholder {
@@ -693,16 +692,7 @@ section {
 
 .about__portrait-img.is-loaded { display: block; }
 
-.about__decoration {
-  position: absolute;
-  bottom: -14px;
-  right: -14px;
-  width: 72px;
-  height: 72px;
-  border: 1px solid rgba(212, 175, 55, 0.12);
-  border-radius: var(--radius-card);
-  pointer-events: none;
-}
+.about__decoration { display: none; }
 
 .about__headline {
   font-family: var(--font-heading);
@@ -866,8 +856,8 @@ section {
   }
 
   .hero__portrait {
-    width: 340px;
-    height: 420px;
+    width: 360px;
+    height: 450px;
   }
 }
 
@@ -885,8 +875,8 @@ section {
   .hero__visual { justify-content: flex-end; }
 
   .hero__portrait {
-    width: 380px;
-    height: 460px;
+    width: 400px;
+    height: 500px;
   }
 
   .mhq__grid {

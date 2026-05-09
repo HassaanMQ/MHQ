@@ -1,8 +1,8 @@
 :root {
-  /* ── Backgrounds (deepened to match logo's rich navy) ─────── */
-  --bg-primary:   #05091A;
-  --bg-secondary: #080D1E;
-  --bg-card:      #0B1020;
+  /* ── Backgrounds (near-black, editorial feel) ──────────────── */
+  --bg-primary:   #07070F;
+  --bg-secondary: #0C0C18;
+  --bg-card:      #101020;
 
   /* ── Text ─────────────────────────────────────────────────── */
   --text-primary:   #EAEAEA;
@@ -31,7 +31,7 @@
   /* ── Typography ───────────────────────────────────────────── */
   --font-heading: 'Playfair Display', serif;
   --font-body:    'Inter', sans-serif;
-  --text-hero:    clamp(48px, 5vw, 64px);
+  --text-hero:    clamp(52px, 6vw, 80px);
   --text-section: clamp(28px, 3vw, 40px);
   --text-sub:     clamp(18px, 2vw, 24px);
   --text-body:    16px;
